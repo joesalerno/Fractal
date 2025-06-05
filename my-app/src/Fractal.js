@@ -291,13 +291,22 @@ const Fractal = () => {
     gl.enableVertexAttribArray(attribLocationsRef.current.vertexPosition);
 
     // HP Uniforms
-    const aspectRatioValue = gl.canvas.width / gl.canvas.height;
-    const hpScaleVal = new Decimal(1.0).div(zoom.current);
+    console.log("JS zoom:", zoom.current.toString());
+    console.log("JS offsetRe:", offset.current.re.toString());
+    console.log("JS offsetIm:", offset.current.im.toString());
 
+    const aspectRatioValue = gl.canvas.width / gl.canvas.height;
+    console.log("JS aspectRatio:", aspectRatioValue);
+
+    const hpScaleVal = new Decimal(1.0).div(zoom.current);
     const hpScaleReArray = decimalToFloatNArray(hpScaleVal, PRECISION_LEVEL_N);
-    // Assuming scale is uniform for Re and Im. If separate, make another u_hp_scale_im uniform
+    console.log("Uniform hpScaleReArray:", hpScaleReArray);
+
     const hpOffsetReArray = decimalToFloatNArray(offset.current.re, PRECISION_LEVEL_N);
+    console.log("Uniform hpOffsetReArray:", hpOffsetReArray);
+
     const hpOffsetImArray = decimalToFloatNArray(offset.current.im, PRECISION_LEVEL_N);
+    console.log("Uniform hpOffsetImArray:", hpOffsetImArray);
 
     gl.uniform1fv(uniformLocationsRef.current.hpScaleRe, hpScaleReArray);
     gl.uniform1fv(uniformLocationsRef.current.hpOffsetRe, hpOffsetReArray);
