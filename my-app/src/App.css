@@ -1,0 +1,50 @@
+html, body, #root, .App {
+  height: 100%;
+  margin: 0;
+  overflow: hidden; /* Prevent scrollbars from App container if canvas somehow overflows */
+}
+
+.App {
+  /* display: flex; /* Not strictly necessary if Fractal is the only child and handles its own size */
+  /* justify-content: center; /* Not strictly necessary */
+  /* align-items: center; /* Not strictly necessary */
+  /* The primary goal is to ensure .App has full height for Fractal to fill. */
+  /* Background color to distinguish App area if Fractal canvas has margins (it shouldn't) */
+  /* background-color: #282c34;  /* Default CRA dark background, can be removed */
+}
+
+/* Default CRA App header styles - can be removed if not used */
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
