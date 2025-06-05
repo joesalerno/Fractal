@@ -1,7 +1,7 @@
 import { Decimal } from 'decimal.js';
 
 // Default precision level (number of float components)
-export const PRECISION_LEVEL_N = 4;
+export const PRECISION_LEVEL_N = 8;
 
 // Set precision for decimal.js operations if needed (default is 20)
 // Decimal.set({ precision: 50 }); // Example: Increase precision for internal calculations
