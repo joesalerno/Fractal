@@ -17,7 +17,7 @@ const hpMathSource = `precision highp float;
 #ifndef HP_MATH_GLSL
 #define HP_MATH_GLSL
 
-#define PRECISION_N 8
+#define PRECISION_N 4
 
 vec2 twoSum(float a, float b) {
     float s = a + b;
