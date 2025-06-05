@@ -13,7 +13,7 @@ const vsSource = `
 `;
 
 // GLSL source for high-precision math (hp_math.glsl)
-const hpMathSource = `
+const hpMathSource = `precision highp float;
 #ifndef HP_MATH_GLSL
 #define HP_MATH_GLSL
 
